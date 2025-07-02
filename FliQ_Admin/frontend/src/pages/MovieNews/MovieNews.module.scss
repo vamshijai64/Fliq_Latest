@@ -1,0 +1,138 @@
+.container {
+    //max-width: 600px;
+    margin: auto;
+    padding: 2px 10px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 5px;
+    border-bottom: 3px solid white;
+    width: 100%;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+    // text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.newsList {
+    margin-top: 20px;
+  }
+  
+  .newsCard {
+    border: 1px solid #ccc;
+    background-color: #000000;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+     
+    p{
+        color: #ccc;
+        text-align: left;
+    }
+
+    h3{
+        color: #ccc;
+        text-align: left;
+        margin-top: 40px;
+    }
+  }
+
+  
+.editButton {
+    position: absolute;
+    //top: 5px;
+    right: 90px;
+    background: var(--primary-button-color);
+    color: var(--button-text-color);
+    border: none;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteButton {
+    position: absolute;
+    //top: 5px;
+    right: 45px;
+    background: var(--primary-button-color);
+    color: var(--button-text-color);
+    border: none;
+    font-size: 18px;
+    //margin-bottom: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+
+.addButton {
+    //margin-top: 200px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.addButton:hover {
+    background-color: #0056b3;
+}
+
+.noNews {
+    color: gray;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .addButton {
+        margin-top: 15vh;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 20px;
+    }
+    
+    .addButton {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}

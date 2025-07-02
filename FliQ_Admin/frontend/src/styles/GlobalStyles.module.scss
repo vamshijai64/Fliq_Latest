@@ -1,0 +1,23 @@
+
+$primary-color: #efe933;
+$background-color: #000000;
+$text-color: #ffffff;
+$background-diff-color: #474646;
+$input-focus-color: #2a5298;
+$primary-button-color: #169241;
+$primary-hover: #004c8c;
+$button-text-color: #ffffff;
+$heading-text-color: black;
+//input-border-color
+
+:root {
+  --primary-color: #{$primary-color};
+  --background-color: #{$background-color};
+  --text-color: #{$text-color};
+  --background-diff-color: #{$background-diff-color}; 
+  --input-focus-color: #{$input-focus-color};
+  --primary-button-color: #{$primary-button-color};
+  --primary-hover: #{$primary-hover};
+  --button-text-color: #{$button-text-color};
+  --heading-text-color: #{$heading-text-color};
+}

@@ -1,0 +1,135 @@
+// @import "../../../styles/GlobalStyles.module.scss"; 
+
+.formContainer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.addQuestions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.inputGroup label {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.inputGroup select,
+.inputGroup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.inputWrapper input {
+    flex-grow: 1;
+    padding-right: 40px;
+}
+
+.icon {
+    position: absolute;
+    right: 22px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.modalActions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submitButton {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .inputGroup select,
+    .inputGroup input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .icon {
+        font-size: 20px;
+        right: 15px;
+    }
+
+    .submitButton {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .submitButton {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .inputGroup {
+        font-size: 14px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .inputGroup select{
+        font-size: 14px;
+        padding: 5px;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .inputGroup select:focus {
+        max-width: 100%;
+        overflow: hidden;
+        clip-path: inset(0px 0px 0px 0px); 
+    }
+}

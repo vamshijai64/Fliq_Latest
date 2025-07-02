@@ -1,0 +1,248 @@
+@import "../../styles/GlobalStyles.module.scss";
+
+.modalOverlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    z-index: 1000; 
+}
+
+.modalContent {
+    background: var(--background-diff-color);
+    padding: 30px;
+    border-radius: 12px;
+    width: 1000px;
+    height: 600px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    padding-top: 50px; 
+
+}
+
+.modalContent h2{
+    color: var(--primary-color);
+    //margin-bottom: 10px;
+}
+
+.modalContent label {
+    margin-bottom: 3px; 
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    display: block;
+    color: var(--text-color);
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.inputContainer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-right: 45px;
+}
+
+/* Hide file input */
+.inputContainer input[type="file"] {
+    display: none;
+}
+
+/* Icon inside input */
+.icon {
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #0066b2;
+    cursor: pointer;
+}
+
+
+.optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 columns
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.optionBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.optionBox label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.optionBox input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.customDropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.customDropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    //padding-right: 35px; 
+    padding: 10px 35px 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.customDropdown::after {
+    content: "▼";  
+    position: absolute;
+    right: 18px;
+    top: 70%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: var(--background-color);
+}
+
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100.4%;
+    margin-bottom: 10px; 
+}
+
+.textarea label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.textareaField {
+    width: 97.5%;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical; 
+    min-height: 30px; 
+}
+
+.modalActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.save{
+    background: var(--background-color);
+    color: var(--primary-color);
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.edit {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+.cancel {
+    position: absolute;
+    top: 5px;  
+    right: 5px; 
+    background: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px){
+    .modalContent{
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .modalActions {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    .modalContent{
+        width: 85%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .modalActions {
+        margin-top: 20px;
+        width: 100%;
+    }
+}

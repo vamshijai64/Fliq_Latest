@@ -1,0 +1,225 @@
+@import "../../../styles/GlobalStyles.module.scss"; 
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    //border-bottom: 2px solid #ddd;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 3px solid white;
+}
+
+.backButton {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    //margin-bottom: 10px;
+    font-size: 14px;
+    // font-weight: bold;
+    transition: background 0.3s;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+    //margin: 0;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.noReviews{
+    color: rgb(255, 255, 255); 
+    font-size: 1.2rem; 
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+
+.reviewCard {
+    background: #1e1e1e; 
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc; 
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+    // min-height: 150px; 
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.reviewContent {
+    flex-grow: 1; 
+}
+
+.reviewText {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.4;
+    // word-wrap: break-word;
+    // overflow-wrap: break-word;
+    // max-width: 100%;
+    // white-space: normal;
+}
+
+.deleteButton {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.deleteButton:hover {
+    color: #cc0000; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pageButton {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.pageButton:hover {
+    background-color: var(--background-color);
+    color: white;
+}
+
+.pageButton:disabled {
+    background-color: var(--background-colorr);
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: var(--background-color);
+    color: white;
+    font-weight: bold;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-10px);
+}
+
+.rating{
+    display: flex;
+    gap: 10px;
+}
+
+.starFilled{
+    color: gold;
+}
+
+.starHalf {
+    color: gold;
+}
+
+.starEmpty{
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 15px;
+        color: var(--primary-color);
+    }
+    .reviewCard {
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%; 
+    }
+    .reviewText {
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+        white-space: normal;
+        text-align: left; 
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 15px;
+        color: var(--primary-color);
+    }
+    .reviewCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%;
+    }
+    .reviewText {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        text-align: left;
+        max-width: 100%;
+    }
+    .pagination {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .pageButton {
+        padding: 10px 15px;
+    }
+    .profileImage {
+        width: 40px;
+        height: 40px;
+    }
+    .backButton {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}

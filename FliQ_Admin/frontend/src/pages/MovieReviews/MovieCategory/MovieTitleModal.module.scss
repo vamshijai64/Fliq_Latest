@@ -1,0 +1,169 @@
+@import "../../../styles/GlobalStyles.module.scss"; 
+
+.modalOverlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    z-index: 1000; 
+}
+
+.modalContent {
+    background: var(--background-diff-color);
+    padding: 30px;
+    border-radius: 12px;
+    width: 800px;
+    height: 500px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    padding-top: 50px; 
+
+}
+
+.cancel {
+    position: absolute;
+    top: 5px;  
+    right: 5px; 
+    background: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent label {
+    margin-bottom: 3px; 
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    display: block;
+    color: var(--text-color);
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.inputContainer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-right: 45px;
+}
+
+.inputContainer input[type="file"] {
+    display: none;
+}
+
+.icon {
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #0066b2;
+    cursor: pointer;
+}
+
+.modalActions {
+    margin-top: 290px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.add {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--background-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .modalContent {
+        width: 90%;
+        height: auto;
+        padding: 50px 5px 15px;
+    }
+
+    .modalActions {
+        margin-top: 40px; 
+        width: 90%;
+    }
+
+    .inputContainer input[type="text"] {
+        font-size: 0.9rem; 
+        width: 50%;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .add {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cancel {
+        font-size: 16px;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 30px;
+    }
+    .modalContent {
+        width: 95%;
+        padding: 50px 5px 15px;
+        height: 300px;
+        
+    }
+    .modalContent label{
+        margin-top: 10px;
+    }
+
+    .modalActions {
+        margin-top: 35px;
+    }
+
+    .add {
+        width: 70%;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+}
